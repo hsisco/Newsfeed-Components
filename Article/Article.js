@@ -88,6 +88,52 @@ const data = [
   }
 ];
 
+const newsfeed = document.querySelector('.articles');
+
+function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+  const card = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const articleDate = document.createElement('p');
+  const p1 = document.createElement('p');
+  const p2 = document.createElement('p');
+  const p3 = document.createElement('p');
+  const button = document.createElement('span');
+
+  // Setup structure of elements
+  card.appendChild(articleTitle);
+  card.appendChild(articleDate);
+  card.appendChild(p1);
+  card.appendChild(p2);
+  card.appendChild(p3);
+  card.appendChild(button);
+
+  // Set class names
+  card.classList.add('article');
+  articleDate.classList.add('date');
+  button.classList.add('expandButton');
+
+  // Set text Content
+  articleTitle.textContent = title;
+  articleDate.textContent = date;
+  p1.textContent = firstParagraph;
+  p2.textContent = secondParagraph;
+  p3.textContent = thirdParagraph;
+  button.textContent = 'Read More';
+
+  // Event Listener
+  button.addEventListener('click', e => {
+    console.log('button is clicked!')
+    card.classList.toggle('article-open');
+    card.classList.toggle('close');
+  });
+
+  return card
+};
+
+data.forEach(data => {
+  newsfeed.appendChild(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
+});
+
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
