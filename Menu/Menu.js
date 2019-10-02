@@ -22,15 +22,16 @@ function newMenu (menuItems){
     const listItem = document.createElement('li');
     listItem.textContent = item;
     menuList.appendChild(listItem);
-
-    menu.classList.add('menu');
-  
-    menuBtn.addEventListener('click', e => {
-      menu.classList.toggle('menu--open');
-      console.log('Menu engaged!'); //<--This was working...
-    })
   })
+
+  menu.classList.add('menu');
   
+  menuBtn.addEventListener('click', e => {
+    menu.classList.toggle('menu--open');
+    console.log('Menu engaged!'); //<--This was working...
+  })
+
+  return menu;
 }
 /* 
 
