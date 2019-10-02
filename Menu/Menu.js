@@ -15,6 +15,22 @@ const menuBtn = document.querySelector('.menu-button');
 function newMenu (menuItems){
   const menu = document.createElement('div');
   const menuList = document.createElement('ul');
+
+  menu.appendChild(menuList);
+
+  menuItems.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.textContent = item;
+    menuList.appendChild(listItem);
+
+    menu.classList.add('menu');
+  
+    menuBtn.addEventListener('click', e => {
+      menu.classList.toggle('menu--open');
+      console.log('Menu engaged!'); //<--This was working...
+    })
+  })
+  
 }
 /* 
 
