@@ -129,6 +129,11 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
 
   return card
 };
+
+data.forEach(data => {
+  newsfeed.appendChild(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
+});
+
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
