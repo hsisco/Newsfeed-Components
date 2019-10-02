@@ -9,6 +9,13 @@ let menuItems = [
   'Log Out'
 ];
 
+const header = document.querySelector('.header');
+const menuBtn = document.querySelector('.menu-button');
+
+function newMenu (menuItems){
+  const menu = document.createElement('div');
+  const menuList = document.createElement('ul');
+}
 /* 
 
   Step 1: Write a function that will create a menu component as seen below:
