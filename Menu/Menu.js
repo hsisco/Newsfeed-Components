@@ -33,6 +33,9 @@ function newMenu (menuItems){
 
   return menu;
 }
+
+header.appendChild(newMenu(menuItems));
+
 /* 
 
   Step 1: Write a function that will create a menu component as seen below:
