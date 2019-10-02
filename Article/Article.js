@@ -88,6 +88,17 @@ const data = [
   }
 ];
 
+const newsfeed = document.querySelector('.articles');
+
+function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+  const card = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const articleDate = document.createElement('p');
+  const p1 = document.createElement('p');
+  const p2 = document.createElement('p');
+  const p3 = document.createElement('p');
+  const button = document.createElement('span');
+
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
