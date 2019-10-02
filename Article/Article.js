@@ -111,6 +111,14 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   card.classList.add('article');
   articleDate.classList.add('date');
   button.classList.add('expandButton');
+
+    // Set text Content
+    articleTitle.textContent = title;
+    articleDate.textContent = date;
+    p1.textContent = firstParagraph;
+    p2.textContent = secondParagraph;
+    p3.textContent = thirdParagraph;
+    button.textContent = 'Read More';
   
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
