@@ -99,6 +99,14 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   const p3 = document.createElement('p');
   const button = document.createElement('span');
 
+    // Setup structure of elements
+    card.appendChild(articleTitle);
+    card.appendChild(articleDate);
+    card.appendChild(p1);
+    card.appendChild(p2);
+    card.appendChild(p3);
+    card.appendChild(button);
+    
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
