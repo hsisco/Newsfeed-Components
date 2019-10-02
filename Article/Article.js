@@ -106,7 +106,12 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
     card.appendChild(p2);
     card.appendChild(p3);
     card.appendChild(button);
-    
+
+      // Set class names
+  card.classList.add('article');
+  articleDate.classList.add('date');
+  button.classList.add('expandButton');
+  
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
